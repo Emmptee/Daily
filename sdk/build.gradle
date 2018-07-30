@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        def BOOLEAN = "boolean"
+        def TRUE = "true"
+        def FALSE = "false"
+        def IS_SHOW_LOG = "IS_SHOW_LOG"
+
+        debug {
+            minifyEnabled false
+            buildConfigField BOOLEAN, IS_SHOW_LOG, TRUE
+        }
+
+        release {
+            minifyEnabled false
+            buildConfigField BOOLEAN, IS_SHOW_LOG, FALSE
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    publishNonDefault true
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+
+    // Android support
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$rootProject.okhttploggingVersion"
+    implementation "com.squareup.okhttp3:okhttp:$rootProject.okhttpVersion"
+
+    // RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    implementation "com.jakewharton.rxbinding2:rxbinding:$rootProject.rxbindingVersion"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    implementation "com.github.bumptech.glide:okhttp-integration:$rootProject.glideokhttpVersion"
+    implementation "jp.wasabeef:glide-transformations:$rootProject.glideTransformationVersion"
+
+    //Butterknife
+    implementation "com.jakewharton:butterknife:$rootProject.butterknifeVersion"
+
+    //fragmentation
+    implementation "me.yokeyword:fragmentation:$rootProject.fragmentationVersion"
+
+    //Logger
+    implementation "com.orhanobut:logger:$rootProject.loggerVersion"
+
+    //circle imageview
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImageviewVersion"
+
+    //BaseRecyclerViewAdapterHelper
+    implementation "com.github.CymChad:BaseRecyclerViewAdapterHelper:$rootProject.BaseRecyclerViewAdapterHelperVersion"
+
+    //SwitchButton
+    implementation "com.kyleduo.switchbutton:library:$rootProject.SwtichButtonVersion"
+
+    //PhotoView
+    implementation "com.bm.photoview:library:$rootProject.PhotoViewVersion"
+    implementation "com.cocosw:bottomsheet:$rootProject.BottomSheetVersion"
+
+    //permissions
+    implementation "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxPerssionsVersion"
+
+    //Bugly
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+}
