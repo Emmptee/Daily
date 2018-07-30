@@ -4,18 +4,25 @@ import android.Manifest;
 import android.arch.lifecycle.Observer;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.sdf.sdk.base.activity.BaseCompatActivity;
-import com.sdf.sdk.global.GlobalApplication;
 import com.sdf.sdk.helper.RxHelper;
 import com.sdf.sdk.utils.StringUtils;
 import com.sdf.sdk.utils.ToastUtils;
+import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 
 public class SplashActivity extends BaseCompatActivity{
 
@@ -58,7 +65,7 @@ public class SplashActivity extends BaseCompatActivity{
     }
 
     private void requestPermissions() {
-        rx rxPermission = new RxPermissions(SplashActivity.this);
+        RxPermissions rxPermission = new RxPermissions(SplashActivity.this);
         //请求权限全部结果
         rxPermission.request(
                 Manifest.permission.CAMERA,
@@ -66,35 +73,35 @@ public class SplashActivity extends BaseCompatActivity{
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.ACCESS_COARSE_LOCATION)
-                .subscribe(new Consumer<Boolean>() {
+                .subscribe(new io.reactivex.functions.Consumer<Boolean>() {
                     @Override
-                    public void accept(Boolean granted) throws Exception {
-                        if (!granted) {
-                            ToastUtils.showToast("App未能获取全部需要的相关权限，部分功能可能不能正常使用.");
+                    public void accept(Boolean aBoolean) throws Exception {
+                        if (!aBoolean){
+                            ToastUtils.showToast("APP未能获取全部需要的权限，可能无法提供更好的服务" );
                         }
-                        //不管是否获取全部权限，进入主页面
                         initCountDown();
                     }
                 });
+
     }
 
     private void initCountDown() {
         Observable.interval(1, TimeUnit.SECONDS)
                 .take(3)//计时次数
-                .map(new Function<Long, Long>() {
+                .map(new Function<Long, Object>() {
                     @Override
                     public Long apply(Long aLong) throws Exception {
                         return mTime - aLong;// 3-0 3-2 3-1
                     }
                 })
-                .compose(RxHelper.<Long>rxSchedulerHelper())
-                .subscribe(new Observer<Long>() {
+                .compose(RxHelper.rxSchedulerHelper())
+                .subscribe(new io.reactivex.Observer<Object>() {
                     @Override
                     public void onSubscribe(Disposable d) {
                     }
 
                     @Override
-                    public void onNext(Long value) {
+                    public void onNext(Object value) {
                         //                        Logger.e("value = " + value);
                         String s = String.valueOf(value);
                         if (tvCountDown != null)
