@@ -1,14 +1,13 @@
-package com.sdf.daily;
+package com.sdf.daily.ui;
 
 import android.Manifest;
-import android.arch.lifecycle.Observer;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.sdf.daily.R;
 import com.sdf.sdk.base.activity.BaseCompatActivity;
 import com.sdf.sdk.helper.RxHelper;
 import com.sdf.sdk.utils.StringUtils;
@@ -16,7 +15,6 @@ import com.sdf.sdk.utils.ToastUtils;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.util.concurrent.TimeUnit;
-import java.util.function.Consumer;
 
 import butterknife.BindView;
 import butterknife.OnClick;
