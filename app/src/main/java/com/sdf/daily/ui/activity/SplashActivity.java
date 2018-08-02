@@ -1,4 +1,4 @@
-package com.sdf.daily.ui;
+package com.sdf.daily.ui.activity;
 
 import android.Manifest;
 import android.content.Intent;

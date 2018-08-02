@@ -127,4 +127,8 @@ dependencies {
 
     //Bugly
     api 'com.tencent.bugly:crashreport:latest.release'
+//    api 'com.github.zhaokaiqiang.klog:library:1.6.0'
+    //klog
+    api "com.github.zhaokaiqiang.klog:library:$rootProject.KlogVersion"
+
 }
