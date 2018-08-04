@@ -1,7 +1,6 @@
 package com.sdf.daily.constant;
 
 /**
- * Created by Horrarndoo on 2017/9/13.
  * <p>
  */
 

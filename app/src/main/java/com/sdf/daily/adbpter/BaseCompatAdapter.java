@@ -10,7 +10,6 @@ import com.sdf.daily.widgets.RvLoadMoreView;
 import java.util.List;
 
 /**
- * Created by Horrarndoo on 2017/9/20.
  * <p>
  */
 

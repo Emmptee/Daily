@@ -33,6 +33,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.MainActivity"/>
+        <activity android:name=".ui.activity.detail.WebViewLoadActivity"/>
+        <activity android:name=".ui.activity.detail.ZhihuDailyDetailActivity"/>
+        <activity android:name=".ui.activity.pic.ImageBrowseActivity"/>
+
     </application>
 
 </manifest>

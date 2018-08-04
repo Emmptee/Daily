@@ -11,7 +11,6 @@ import com.sdf.daily.contract.detail.BaseWebViewLoadContract;
 import com.sdf.sdk.utils.FileUtils;
 
 /**
- * Created by Horrarndoo on 2017/9/28.
  * <p>
  */
 

@@ -14,12 +14,6 @@ import com.sdf.sdk.base.BasePresenter;
 import com.sdf.sdk.utils.HtmlUtils;
 import com.sdf.sdk.utils.ResourcesUtils;
 
-
-/**
- * Created by Horrarndoo on 2017/9/13.
- * <p>
- */
-
 public class ZhihuDailyDetailActivity extends BaseWebViewLoadActivity<ZhihuDetailContract
         .ZhihuDetailPresenter> implements ZhihuDetailContract.IZhihuDetailView {
 

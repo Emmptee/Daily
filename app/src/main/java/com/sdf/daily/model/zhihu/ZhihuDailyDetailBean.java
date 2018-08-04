@@ -4,9 +4,6 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-/**
- * <p>
- */
 public class ZhihuDailyDetailBean {
     @SerializedName("body")
     private String body;

@@ -9,7 +9,6 @@ import com.sdf.sdk.base.IBaseModel;
 
 
 /**
- * Created by Horrarndoo on 2017/9/20.
  * <p>
  * webview base contract
  */

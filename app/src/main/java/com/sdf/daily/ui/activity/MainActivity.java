@@ -3,12 +3,12 @@ package com.sdf.daily.ui.activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -19,9 +19,9 @@ import com.sdf.daily.constant.RxBusCode;
 import com.sdf.daily.model.RxEventHeadBean;
 import com.sdf.daily.ui.HomeFragment;
 import com.sdf.daily.ui.HomeRootFragment;
+import com.sdf.daily.ui.activity.detail.WebViewLoadActivity;
 import com.sdf.daily.widgets.MovingImageView;
 import com.sdf.sdk.base.activity.BaseCompatActivity;
-import com.sdf.sdk.helper.BottomNavigationViewHelper;
 import com.sdf.sdk.rxbus.RxBus;
 import com.sdf.sdk.rxbus.Subscribe;
 import com.sdf.sdk.utils.AppUtils;
@@ -102,8 +102,8 @@ public class MainActivity extends BaseCompatActivity implements HomeFragment.OnO
         }
 
         NavigationUtils.disableNavigationViewScrollbars(nvMenu);
-        mivMenu = (MovingImageView) nvMenu.getHeaderView(0).findViewById(R.id.miv_menu);
-        civHead = (CircleImageView) nvMenu.getHeaderView(0).findViewById(R.id.civ_head);
+        mivMenu = nvMenu.getHeaderView(0).findViewById(R.id.miv_menu);
+        civHead = nvMenu.getHeaderView(0).findViewById(R.id.civ_head);
 
         //此处实际应用中替换成服务器拉取图片
         Uri headUri = Uri.fromFile(new File(getCacheDir(), HeadConstant.HEAD_IMAGE_NAME + ".jpg"));
@@ -123,7 +123,7 @@ public class MainActivity extends BaseCompatActivity implements HomeFragment.OnO
             }
         });
 
-        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+//        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);//去掉底部按钮的特效
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView
                 .OnNavigationItemSelectedListener() {
             @Override
@@ -265,6 +265,7 @@ public class MainActivity extends BaseCompatActivity implements HomeFragment.OnO
      */
     @Subscribe(code = RxBusCode.RX_BUS_CODE_HEAD_IMAGE_URI)
     public void rxBusEvent(RxEventHeadBean bean) {
+        KLog.e("打印BEAN=======" + bean);
         Uri uri = bean.getUri();
         if (uri == null) {
             return;

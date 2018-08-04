@@ -18,7 +18,6 @@ import java.util.List;
 
 
 /**
- * Created by Horrarndoo on 2017/9/12.
  * <p>
  * 知乎日报Adapter
  */

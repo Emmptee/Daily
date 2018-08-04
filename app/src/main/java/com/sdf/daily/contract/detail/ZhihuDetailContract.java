@@ -7,7 +7,6 @@ import com.sdf.daily.presenter.detail.BaseWebViewLoadPresenter;
 import io.reactivex.Observable;
 
 /**
- * Created by Horrarndoo on 2017/9/13.
  * <p>
  * 知乎日报详情页接口
  */

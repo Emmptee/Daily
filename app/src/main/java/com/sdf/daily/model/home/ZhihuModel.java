@@ -19,7 +19,6 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 
 /**
- * Created by Horrarndoo on 2017/9/12.
  * <p>
  */
 

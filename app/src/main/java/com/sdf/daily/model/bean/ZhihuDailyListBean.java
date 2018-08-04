@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 /**
- * Created by Horrarndoo on 2017/9/12.
  * <p>
  */
 public class ZhihuDailyListBean {

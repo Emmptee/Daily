@@ -17,7 +17,6 @@ import android.view.View;
 
 import com.orhanobut.logger.Logger;
 import com.sdf.daily.R;
-import com.sdf.daily.constant.BundleKeyConstant;
 import com.sdf.daily.constant.TabFragmentIndex;
 import com.sdf.daily.contract.HomeMainContract;
 import com.sdf.daily.presenter.HomemainPresenter;

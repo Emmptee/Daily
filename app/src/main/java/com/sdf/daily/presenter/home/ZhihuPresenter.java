@@ -15,7 +15,6 @@ import com.sdf.daily.ui.activity.detail.ZhihuDailyDetailActivity;
 import io.reactivex.functions.Consumer;
 
 /**
- * Created by Horrarndoo on 2017/9/12.
  * <p>
  */
 

@@ -22,7 +22,6 @@ import java.util.List;
 import butterknife.BindView;
 
 /**
- * Created by Horrarndoo on 2017/9/11.
  * <p>
  */
 

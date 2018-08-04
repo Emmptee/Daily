@@ -31,7 +31,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Horrarndoo on 2017/9/7.
  * <p>
  * 滚动view动画
  */
