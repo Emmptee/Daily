@@ -20,7 +20,7 @@ public class HomeRootFragment extends BaseCompatFragment {
 
     @Override
     public int getLayoutId() {
-        return R.layout.fragment_home;
+        return R.layout.fragment_root_home;
     }
 
     @Override
