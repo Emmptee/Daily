@@ -1,4 +1,4 @@
-package com.sdf.daily.ui;
+package com.sdf.daily.ui.fragment.home.child;
 
 import android.content.Context;
 import android.os.Build;
@@ -20,7 +20,7 @@ import com.sdf.daily.R;
 import com.sdf.daily.constant.TabFragmentIndex;
 import com.sdf.daily.contract.HomeMainContract;
 import com.sdf.daily.presenter.HomemainPresenter;
-import com.sdf.daily.ui.fragment.ZhihuFragment;
+import com.sdf.daily.ui.fragment.home.child.tab.ZhihuFragment;
 import com.sdf.sdk.adapter.FragmentAdapter;
 import com.sdf.sdk.anim.ToolbarAnimManager;
 import com.sdf.sdk.base.BasePresenter;

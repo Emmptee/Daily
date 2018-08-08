@@ -1,4 +1,4 @@
-package com.sdf.daily.ui;
+package com.sdf.daily.ui.fragment.home;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.sdf.daily.R;
+import com.sdf.daily.ui.fragment.home.child.HomeFragment;
 import com.sdf.sdk.base.fragment.BaseCompatFragment;
 
 @SuppressLint("ValidFragment")

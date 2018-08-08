@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 
 
 import com.sdf.daily.api.ZhihuApi;
-import com.sdf.daily.contract.home.ZhihuContract;
+import com.sdf.daily.contract.home.tab.ZhihuContract;
 import com.sdf.daily.model.bean.ZhihuDailyListBean;
 import com.sdf.sdk.base.BaseModel;
 import com.sdf.sdk.config.DBConfig;

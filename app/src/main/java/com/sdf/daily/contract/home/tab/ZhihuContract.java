@@ -1,5 +1,6 @@
-package com.sdf.daily.contract.home;
+package com.sdf.daily.contract.home.tab;
 
+import com.sdf.daily.contract.home.BaseTabsContract;
 import com.sdf.daily.model.bean.ZhihuDailyItemBean;
 import com.sdf.daily.model.bean.ZhihuDailyListBean;
 
@@ -13,7 +14,7 @@ import io.reactivex.Observable;
 public interface ZhihuContract {
 
     abstract class ZhihuPresenter extends BaseTabsContract.BaseTabsPresenter<IZhihuModel,
-            IZhihuView, ZhihuDailyItemBean> {
+                IZhihuView, ZhihuDailyItemBean> {
     }
 
     interface IZhihuModel extends BaseTabsContract.IBaseTabsModel {

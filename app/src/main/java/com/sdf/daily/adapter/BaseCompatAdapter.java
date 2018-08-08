@@ -1,4 +1,4 @@
-package com.sdf.daily.adbpter;
+package com.sdf.daily.adapter;
 
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;

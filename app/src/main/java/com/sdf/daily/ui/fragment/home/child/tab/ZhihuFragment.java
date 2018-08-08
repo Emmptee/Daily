@@ -1,4 +1,4 @@
-package com.sdf.daily.ui.fragment;
+package com.sdf.daily.ui.fragment.home.child.tab;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,8 +9,8 @@ import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.sdf.daily.R;
-import com.sdf.daily.adbpter.ZhihuAdapter;
-import com.sdf.daily.contract.home.ZhihuContract;
+import com.sdf.daily.adapter.ZhihuAdapter;
+import com.sdf.daily.contract.home.tab.ZhihuContract;
 import com.sdf.daily.model.bean.ZhihuDailyItemBean;
 import com.sdf.daily.presenter.home.ZhihuPresenter;
 import com.sdf.sdk.base.BasePresenter;
@@ -21,9 +21,6 @@ import java.util.List;
 
 import butterknife.BindView;
 
-/**
- * <p>
- */
 
 public class ZhihuFragment extends BaseRecycleFragment<ZhihuContract.ZhihuPresenter> implements
         ZhihuContract.IZhihuView, BaseQuickAdapter.RequestLoadMoreListener {

@@ -5,7 +5,7 @@ import android.support.annotation.NonNull;
 
 import com.orhanobut.logger.Logger;
 import com.sdf.daily.constant.BundleKeyConstant;
-import com.sdf.daily.contract.home.ZhihuContract;
+import com.sdf.daily.contract.home.tab.ZhihuContract;
 import com.sdf.daily.model.bean.ZhihuDailyItemBean;
 import com.sdf.daily.model.bean.ZhihuDailyListBean;
 import com.sdf.daily.model.home.ZhihuModel;
